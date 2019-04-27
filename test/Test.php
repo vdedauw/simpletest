@@ -15,6 +15,7 @@
  *    Version 0.0.5 2019/03/31, added object, the object to test, tests::object changed to tests::className 
  *    Version 0.0.6 2019/04/12, added disabled, showResult, description (prepare for database) 
  *    Version 0.0.7 2019/04/17, added $this->func and $this->args, used in execute to test from inside the test 
+ *    Version 0.0.8 2019/04/26, $this->object is public 
  */
 
 class test {
@@ -46,7 +47,7 @@ class test {
 	public $error;       	// possibly, an  error message from the tested object
 	public $reason;         // the reason the test has failed or had success
 	
-	private $object;			// the object to test
+	public $object;			// the object to test
 	private $func;				// the function to execute
 
 	function __construct($id,$title,$name,$expected,$condition) {
